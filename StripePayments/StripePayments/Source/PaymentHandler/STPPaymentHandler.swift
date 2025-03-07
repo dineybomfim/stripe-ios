@@ -1634,7 +1634,7 @@ public class STPPaymentHandler: NSObject {
         let options: [UIApplication.OpenExternalURLOptionsKey: Any] = [
             UIApplication.OpenExternalURLOptionsKey.universalLinksOnly: false,
         ]
-        UIApplication.shared.open(
+        UIApplication.stpShared.open(
             url,
             options: options,
             completionHandler: { _ in
@@ -1788,7 +1788,7 @@ public class STPPaymentHandler: NSObject {
 
         // We don't check canOpenURL before opening the URL because that requires users to pre-register the custom URL schemes
         if let url = url {
-            UIApplication.shared.open(
+            UIApplication.stpShared.open(
                 url,
                 options: options,
                 completionHandler: { success in

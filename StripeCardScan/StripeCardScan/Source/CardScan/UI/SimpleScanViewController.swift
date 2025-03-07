@@ -524,12 +524,12 @@ class SimpleScanViewController: ScanBaseViewController {
     /// Warning: if the user navigates to settings and updates the setting, it'll suspend your app.
     @objc func enableCameraPermissionsPress() {
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString),
-            UIApplication.shared.canOpenURL(settingsUrl)
+            UIApplication.stpShared.canOpenURL(settingsUrl)
         else {
             return
         }
 
-        UIApplication.shared.open(settingsUrl)
+        UIApplication.stpShared.open(settingsUrl)
     }
 }
 

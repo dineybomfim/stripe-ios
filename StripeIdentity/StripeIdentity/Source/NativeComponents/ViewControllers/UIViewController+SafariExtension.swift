@@ -13,7 +13,7 @@ import UIKit
 extension UIViewController {
     func openInSafariViewController(url: URL) {
         guard url.scheme == "http" || url.scheme == "https" else {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.stpShared.open(url, options: [:], completionHandler: nil)
             return
         }
 

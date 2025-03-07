@@ -334,7 +334,7 @@ final class PartnerAuthViewController: SheetViewController {
         )
 
         subscribeToURLAndAppActiveNotifications()
-        UIApplication.shared.open(
+        UIApplication.stpShared.open(
             url,
             options: [.universalLinksOnly: true]
         ) { (didOpenBankingApp) in
@@ -810,7 +810,7 @@ private extension PartnerAuthViewController {
     private func handleAuthSessionCompletionFromNativeRedirectIfNeeded() {
         assertMainQueue()
 
-        guard UIApplication.shared.applicationState == .active else {
+        guard UIApplication.stpShared.applicationState == .active else {
             /**
              When we get url callback the app might not be in foreground state.
              If we then proceed with authorization network request might fail as we will be doing background networking without special permission..

@@ -55,8 +55,6 @@ extension PaymentSheet {
 
 // MARK: - Native Link
 
-@available(iOSApplicationExtension, unavailable)
-@available(macCatalystApplicationExtension, unavailable)
 extension PaymentSheet {
 
     func presentPayWithNativeLinkController(
@@ -116,8 +114,6 @@ extension PaymentSheet {
 
 }
 
-@available(iOSApplicationExtension, unavailable)
-@available(macCatalystApplicationExtension, unavailable)
 extension PaymentSheet: PayWithLinkViewControllerDelegate {
 
     func payWithLinkViewControllerDidConfirm(

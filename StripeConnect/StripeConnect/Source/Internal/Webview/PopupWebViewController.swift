@@ -19,7 +19,7 @@ class PopupWebViewController: ConnectWebViewController {
          analyticsClient: ComponentAnalyticsClient,
          navigationAction: WKNavigationAction,
          allowedHosts: [String],
-         urlOpener: ApplicationURLOpener = UIApplication.shared,
+         urlOpener: ApplicationURLOpener = UIApplication.stpShared,
          sdkVersion: String? = StripeAPIConfiguration.STPSDKVersion) {
         super.init(configuration: configuration,
                    analyticsClient: analyticsClient,

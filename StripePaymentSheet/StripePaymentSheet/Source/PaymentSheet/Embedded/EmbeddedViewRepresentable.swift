@@ -59,6 +59,6 @@ struct EmbeddedViewRepresentable: UIViewRepresentable {
 
 extension UIWindow {
     static var visibleViewController: UIViewController? {
-        UIApplication.shared.stp_hackilyFumbleAroundUntilYouFindAKeyWindow()?.rootViewController?.findTopMostPresentedViewController()
+        UIApplication.stpShared.stp_hackilyFumbleAroundUntilYouFindAKeyWindow()?.rootViewController?.findTopMostPresentedViewController()
     }
 }

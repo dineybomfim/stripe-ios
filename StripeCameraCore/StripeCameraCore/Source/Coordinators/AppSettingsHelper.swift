@@ -30,7 +30,7 @@ public protocol AppSettingsHelperProtocol {
         guard let settingsUrl = appSettingsUrl else {
             return false
         }
-        return UIApplication.shared.canOpenURL(settingsUrl)
+        return UIApplication.stpShared.canOpenURL(settingsUrl)
     }
 
     /// Opens the app's settings screen, if possible.
@@ -38,6 +38,6 @@ public protocol AppSettingsHelperProtocol {
         guard let settingsUrl = appSettingsUrl else {
             return
         }
-        UIApplication.shared.open(settingsUrl)
+        UIApplication.stpShared.open(settingsUrl)
     }
 }

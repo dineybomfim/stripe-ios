@@ -109,7 +109,7 @@ extension WebViewViewController: WKUIDelegate {
         if isAttemptingToOpenLinkInNewWindow, let url = navigationAction.request.url {
             // Attempt to open the URL as a universal link.
             // Universal links allow apps on the device to handle specific URLs directly.
-            UIApplication.shared.open(
+            UIApplication.stpShared.open(
                 url,
                 options: [.universalLinksOnly: true],
                 completionHandler: { [weak self] success in

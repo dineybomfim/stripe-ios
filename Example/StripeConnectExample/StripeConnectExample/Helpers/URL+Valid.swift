@@ -9,6 +9,6 @@ import UIKit
 
 extension URL {
     var isValid: Bool {
-        UIApplication.shared.canOpenURL(self)
+        UIApplication.stpShared.canOpenURL(self)
     }
 }

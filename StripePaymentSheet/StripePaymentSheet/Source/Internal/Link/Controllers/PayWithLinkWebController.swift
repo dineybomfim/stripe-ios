@@ -54,7 +54,7 @@ final class PayWithLinkWebController: NSObject, ASWebAuthenticationPresentationC
         if let window = presentationVC?.view.window {
             return window
         }
-        return UIApplication.shared.stp_hackilyFumbleAroundUntilYouFindAKeyWindow()!
+        return UIApplication.stpShared.stp_hackilyFumbleAroundUntilYouFindAKeyWindow()!
     }
     var presentationVC: UIViewController?
 

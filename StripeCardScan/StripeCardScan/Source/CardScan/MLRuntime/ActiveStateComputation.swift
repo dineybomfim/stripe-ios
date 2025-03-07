@@ -41,7 +41,7 @@ class ActiveStateComputation {
         self.queue = DispatchQueue(label: "ActiveStateComputation \(label)")
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.isActive = UIApplication.shared.applicationState == .active
+            self.isActive = UIApplication.stpShared.applicationState == .active
 
             // We don't need to unregister these functions because the system will clean
             // them up for us
@@ -63,7 +63,7 @@ class ActiveStateComputation {
     func async(execute work: @escaping () -> Void) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            let state = UIApplication.shared.applicationState
+            let state = UIApplication.stpShared.applicationState
             guard state == .active, self.isActive else {
                 self.pendingComputations.append(work)
                 return
@@ -74,14 +74,14 @@ class ActiveStateComputation {
     }
 
     @objc func willResignActive() {
-        assert(UIApplication.shared.applicationState == .active)
+        assert(UIApplication.stpShared.applicationState == .active)
         assert(Thread.isMainThread)
         isActive = false
         queue.sync {}
     }
 
     @objc func didBecomeActive() {
-        assert(UIApplication.shared.applicationState == .active)
+        assert(UIApplication.stpShared.applicationState == .active)
         assert(Thread.isMainThread)
         isActive = true
         for work in pendingComputations {

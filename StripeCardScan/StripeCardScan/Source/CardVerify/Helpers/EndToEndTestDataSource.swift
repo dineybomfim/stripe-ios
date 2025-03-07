@@ -23,7 +23,7 @@
         }()
 
         func nextSquareAndFullImage() -> CGImage? {
-            guard let targetSize = UIApplication.shared.windows.first?.frame.size else {
+            guard let targetSize = UIApplication.stpShared.windows.first?.frame.size else {
                 return nil
             }
 

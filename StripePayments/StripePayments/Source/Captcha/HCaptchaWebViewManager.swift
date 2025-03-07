@@ -309,13 +309,13 @@ fileprivate extension HCaptchaWebViewManager {
      */
     func setupWebview(html: String, url: URL) {
         #if os(visionOS)
-        let windows = UIApplication.shared.connectedScenes
+        let windows = UIApplication.stpShared.connectedScenes
             .compactMap { ($0 as? UIWindowScene)?.windows }
             .flatMap { $0 }
             .sorted { firstWindow, _ in firstWindow.isKeyWindow }
         let window = windows.first
         #else
-        let window = UIApplication.shared.windows.first { $0.isKeyWindow }
+        let window = UIApplication.stpShared.windows.first { $0.isKeyWindow }
         #endif
         if let window {
             setupWebview(on: window, html: html, url: url)

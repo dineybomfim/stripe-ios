@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
 
     static func topMostViewController() -> UIViewController? {
-        guard let window = UIApplication.shared.customKeyWindow else {
+        guard let window = UIApplication.stpShared.customKeyWindow else {
             return nil
         }
         var topMostViewController = window.rootViewController

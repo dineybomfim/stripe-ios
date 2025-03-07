@@ -239,7 +239,7 @@ struct PlaygroundView: View {
     }
 
     private func hideKeyboard(_ value: DragGesture.Value) {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        UIApplication.stpShared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 

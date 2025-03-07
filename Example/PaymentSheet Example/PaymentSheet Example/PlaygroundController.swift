@@ -444,7 +444,7 @@ class PlaygroundController: ObservableObject {
 
     var rootViewController: UIViewController {
         // Hack, should do this in SwiftUI
-        return UIApplication.shared.windows.first!.rootViewController!
+        return UIApplication.stpShared.windows.first!.rootViewController!
     }
 
     private var subscribers: Set<AnyCancellable> = []

@@ -15,7 +15,7 @@ extension SFSafariViewController {
             url.scheme == "http" || url.scheme == "https",
             let topMostViewController = UIViewController.topMostViewController()
         else {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.stpShared.open(url, options: [:], completionHandler: nil)
             return
         }
         let safariViewController = SFSafariViewController(url: url)

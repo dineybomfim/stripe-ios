@@ -199,6 +199,6 @@ extension VerificationFlowWebViewController: VerificationFlowWebViewDelegate {
     }
 
     func verificationFlowWebView(_ view: VerificationFlowWebView, didOpenURLInNewTarget url: URL) {
-        UIApplication.shared.open(url)
+        UIApplication.stpShared.open(url)
     }
 }

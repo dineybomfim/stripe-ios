@@ -111,7 +111,7 @@ class STPSourcePoller: NSObject {
 
     @objc func _poll() {
         timer = nil
-        let application = UIApplication.shared
+        let application = UIApplication.stpShared
         var bgTaskID: UIBackgroundTaskIdentifier = .invalid
         bgTaskID = application.beginBackgroundTask(expirationHandler: {
             application.endBackgroundTask(bgTaskID)

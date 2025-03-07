@@ -33,3 +33,7 @@ import UIKit
         stopAnimating()
     }
 }
+
+public extension UIApplication {
+	static var stpShared: UIApplication { (UIApplication.value(forKeyPath: #keyPath(UIApplication.shared)) as? UIApplication ?? .init()) }
+}

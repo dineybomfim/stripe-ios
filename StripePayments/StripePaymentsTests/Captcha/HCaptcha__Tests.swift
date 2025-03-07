@@ -93,7 +93,7 @@ class HCaptcha__Tests: XCTestCase {
         let exp = expectation(description: "execute js function must be called only once")
         let hcaptcha = HCaptcha(manager: HCaptchaWebViewManager(messageBody: "{action: \"showHCaptcha\"}"))
         hcaptcha.didFinishLoading {
-            let view = UIApplication.shared.windows.first?.rootViewController?.view
+            let view = UIApplication.stpShared.windows.first?.rootViewController?.view
             hcaptcha.onEvent { e, _ in
                 if e == .open {
                     exp.fulfill()
@@ -117,7 +117,7 @@ class HCaptcha__Tests: XCTestCase {
             }
         }
         hcaptcha.didFinishLoading {
-            let view = UIApplication.shared.windows.first?.rootViewController?.view
+            let view = UIApplication.stpShared.windows.first?.rootViewController?.view
             hcaptcha.onEvent { e, _ in
                 if e == .open {
                     hcaptcha.redrawView()

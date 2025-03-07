@@ -233,7 +233,7 @@ extension FinancialConnectionsWebFlowViewController {
             self.continueStateView.isHidden = false
             self.subscribeToURLAndAppActiveNotifications()
             self.lastOpenedNativeURL = url
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.stpShared.open(url, options: [:], completionHandler: nil)
         }
     }
 
@@ -390,7 +390,7 @@ private extension FinancialConnectionsWebFlowViewController {
     private func restartAuthenticationIfNeeded() {
         dispatchPrecondition(condition: .onQueue(.main))
 
-        guard UIApplication.shared.applicationState == .active, let parameters = unprocessedReturnURLParameters else {
+        guard UIApplication.stpShared.applicationState == .active, let parameters = unprocessedReturnURLParameters else {
             /**
              When we get url callback the app might not be in foreground state.
              If we then restart authentication session ASWebAuthenticationSession will fail as you can't start it in a non-foreground state.

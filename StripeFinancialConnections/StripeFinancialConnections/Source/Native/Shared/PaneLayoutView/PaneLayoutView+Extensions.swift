@@ -12,7 +12,6 @@ import UIKit
 
 extension PaneLayoutView {
 
-    @available(iOSApplicationExtension, unavailable)
     static func createContentView(
         iconView: UIView?,
         title: String?,
@@ -43,7 +42,6 @@ extension PaneLayoutView {
         return verticalStackView
     }
 
-    @available(iOSApplicationExtension, unavailable)
     static func createHeaderView(
         iconView: UIView?,
         title: String?,
@@ -87,7 +85,6 @@ extension PaneLayoutView {
         return paddingStackView
     }
 
-    @available(iOSApplicationExtension, unavailable)
     static func createBodyView(
         text: String?,
         contentView: UIView?
@@ -143,7 +140,6 @@ extension PaneLayoutView {
         }
     }
 
-    @available(iOSApplicationExtension, unavailable)
     static func createFooterView(
         primaryButtonConfiguration: PaneLayoutView.ButtonConfiguration?,
         secondaryButtonConfiguration: PaneLayoutView.ButtonConfiguration? = nil,

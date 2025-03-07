@@ -12,8 +12,6 @@
 import UIKit
 
 /// Standalone Link controller
-@available(iOSApplicationExtension, unavailable)
-@available(macCatalystApplicationExtension, unavailable)
 final class PayWithNativeLinkController {
 
     typealias CompletionBlock = PaymentSheetResultCompletionBlock
@@ -62,8 +60,6 @@ final class PayWithNativeLinkController {
 
 }
 
-@available(iOSApplicationExtension, unavailable)
-@available(macCatalystApplicationExtension, unavailable)
 extension PayWithNativeLinkController: PayWithLinkViewControllerDelegate {
 
     func payWithLinkViewControllerDidConfirm(

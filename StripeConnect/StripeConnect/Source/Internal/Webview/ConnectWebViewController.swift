@@ -50,7 +50,7 @@ class ConnectWebViewController: UIViewController {
          analyticsClient: ComponentAnalyticsClient,
          allowedHosts: [String],
          // Only override for tests
-         urlOpener: ApplicationURLOpener = UIApplication.shared,
+         urlOpener: ApplicationURLOpener = UIApplication.stpShared,
          fileManager: FileManager = .default,
          sdkVersion: String? = StripeAPIConfiguration.STPSDKVersion) {
         self.analyticsClient = analyticsClient

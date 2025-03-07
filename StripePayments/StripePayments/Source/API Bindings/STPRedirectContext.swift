@@ -102,7 +102,7 @@ public class STPRedirectContext: NSObject,
     var _handleRedirectCompletionWithErrorHook: ((Bool) -> Void)?
     /// Hook for testing when startSafariAppRedirectFlowCalled is called
     var _startSafariAppRedirectFlowCalled: Bool = false
-    var application: UIApplicationProtocol = UIApplication.shared
+    var application: UIApplicationProtocol = UIApplication.stpShared
 
     /// Initializer for context from an `STPSource`.
     /// @note You must ensure that the returnURL set up in the created source
